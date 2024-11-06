@@ -8,11 +8,11 @@ namespace Black_Friday.Model
 {
     internal class Item
     {
-        private string Nev { get; set; }
-        private string Gyarto { get; set; }
-        private int Ar { get; set; }
-        private int Szorzo { get; set; }
-        private double Akcios_ar { get; set; }
+        public string Nev { get; set; }
+        public string Gyarto { get; set; }
+        public double Ar { get; set; }
+        public int Szorzo { get; set; }
+        public double Akcios_ar { get; set; }
 
         public Item(string nev,string gyaroto,int ar,int szorzo)
         {
@@ -33,20 +33,5 @@ namespace Black_Friday.Model
             this.Szorzo = 0;
             this.Akcios_ar = 0;
         }
-        public List<string> getValues()
-        {
-            List<string> items = new List<string>
-            {
-                Nev,
-                Gyarto,
-                Ar.ToString(),
-                Szorzo.ToString(),
-                Akcios_ar.ToString()
-            };
-
-            return items;
-        }
-
-
     }
 }
