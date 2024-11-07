@@ -1,6 +1,6 @@
 ﻿namespace Black_Friday
 {
-    partial class Form1
+    partial class BlackFriday
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Akcio_BTN = new System.Windows.Forms.Button();
+            this.termeket_DGV = new System.Windows.Forms.DataGridView();
+            this.Név = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gyártó = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ár = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.termeket_DGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Akcio_BTN
             // 
-            this.button1.Location = new System.Drawing.Point(297, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Akcio_BTN.Location = new System.Drawing.Point(336, 28);
+            this.Akcio_BTN.Name = "Akcio_BTN";
+            this.Akcio_BTN.Size = new System.Drawing.Size(109, 42);
+            this.Akcio_BTN.TabIndex = 0;
+            this.Akcio_BTN.Text = "Akciós ár";
+            this.Akcio_BTN.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // termeket_DGV
+            // 
+            this.termeket_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.termeket_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Név,
+            this.Gyártó,
+            this.Ár});
+            this.termeket_DGV.Location = new System.Drawing.Point(212, 85);
+            this.termeket_DGV.Name = "termeket_DGV";
+            this.termeket_DGV.Size = new System.Drawing.Size(348, 262);
+            this.termeket_DGV.TabIndex = 1;
+            // 
+            // Név
+            // 
+            this.Név.HeaderText = "Név";
+            this.Név.Name = "Név";
+            // 
+            // Gyártó
+            // 
+            this.Gyártó.HeaderText = "Gyártó";
+            this.Gyártó.Name = "Gyártó";
+            // 
+            // Ár
+            // 
+            this.Ár.HeaderText = "Ár";
+            this.Ár.Name = "Ár";
+            // 
+            // BlackFriday
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.termeket_DGV);
+            this.Controls.Add(this.Akcio_BTN);
+            this.Name = "BlackFriday";
             this.Text = "Black friday";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.termeket_DGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Akcio_BTN;
+        private System.Windows.Forms.DataGridView termeket_DGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Név;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gyártó;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ár;
     }
 }
 

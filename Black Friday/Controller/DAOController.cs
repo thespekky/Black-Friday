@@ -9,10 +9,6 @@ namespace Black_Friday.Controller
 {
     internal class DAOController
     {
-        public DAOController()
-        {
-            
-        }
         public bool AddItem(Item item)
         {
             return true;

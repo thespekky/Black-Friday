@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Black_Friday
 {
-    public partial class Form1 : Form
+    public partial class BlackFriday : Form
     {
-        public Form1()
+        public BlackFriday()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Form form2 = new Form();
+            /*Form form2 = new Form();
             List<Item> items = new List<Item> { new Item(),new Item("nev2","gyarto012",100,20)};
             form2.Text = "Valami";
             Button b = new Button();
@@ -35,10 +35,20 @@ namespace Black_Friday
             }
             MessageBox.Show($"{elem1.Nev}");
             b.BackColor = Color.Red;
+            b.Text = "Új gomb";
+            b.Width = 100;
+            b.Height = 100;
             b.Location = new Point(100, 100);
             b.Show();
+            this.Controls.Add(b);
            
-            form2.ShowDialog();
+            form2.ShowDialog();*/
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            Akcio_BTN.Location = new Point((BlackFriday.ActiveForm.Width/2)-Akcio_BTN.Width/2, Akcio_BTN.Height);
+            termeket_DGV.Location = new Point(((BlackFriday.ActiveForm.Width/2)-termeket_DGV.Width/2), termeket_DGV.Height/2);
         }
     }
 }
