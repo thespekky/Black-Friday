@@ -13,7 +13,7 @@ namespace Black_Friday.Controller
         private static DAOController dao;
 
 
-        public ItemController getInstance()
+        public static ItemController getInstance()
         {
             if(instance==null)
             {
@@ -29,13 +29,16 @@ namespace Black_Friday.Controller
         {
             return dao.AddItem(oneItem);
         }
-        public bool changeItem(Item oneItem)
+        public bool changeItem(string nev,string gyarto,int ar,int szorzo,int index)
         {
-            return dao.ChangeItem(oneItem);
+            return dao.ChangeItem( nev,  gyarto,  ar,  szorzo,  index);
         }
         public Item SearchItem(string nev)
         {
             return dao.Search(nev);
+        }
+        public List<Item> GetItems() {
+            return dao.getItems();
         }
     }
 }
