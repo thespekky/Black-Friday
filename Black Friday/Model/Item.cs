@@ -21,12 +21,9 @@ namespace Black_Friday.Model
             this.Gyarto = gyaroto;
             this.Ar = ar;
             if (szorzo <= 100 && szorzo >= 1)
-            {
-                
+            { 
                 this.Szorzo = szorzo;
-                double valami=this.Szorzo/100;
-                this.Akcios_ar = this.Ar + (this.Szorzo / 100);
-
+                this.Akcios_ar = this.Ar - (this.Ar*this.Szorzo / 100);
             }
         }
         public Item()
@@ -50,7 +47,7 @@ namespace Black_Friday.Model
             return new object[]{
                 this.Nev,
                 this.Gyarto,
-                 this.Ar,
+                 this.Ar+(this.Ar*this.Szorzo/100),
                 this.Akcios_ar,
             };
         }

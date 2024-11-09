@@ -37,6 +37,10 @@ namespace Black_Friday.Controller
         {
             return dao.Search(nev);
         }
+        public bool HasItem(string nev)
+        {
+            return dao.HasItem(nev);
+        }
         public List<Item> GetItems() {
             return dao.getItems();
         }

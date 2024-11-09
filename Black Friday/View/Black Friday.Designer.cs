@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.termeket_DGV = new System.Windows.Forms.DataGridView();
             this.nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gyarto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Add_BTN = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.akciósÁrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hozzáadásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.keresésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.módosításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Modosit_BTN = new System.Windows.Forms.Button();
             this.akcio_CheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.termeket_DGV)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // termeket_DGV
@@ -56,14 +50,14 @@
             this.nev,
             this.gyarto,
             this.ar});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.termeket_DGV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.termeket_DGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.termeket_DGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.termeket_DGV.Location = new System.Drawing.Point(191, 98);
             this.termeket_DGV.Name = "termeket_DGV";
@@ -99,43 +93,7 @@
             this.Add_BTN.TabIndex = 2;
             this.Add_BTN.Text = "Hozzáadás";
             this.Add_BTN.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.akciósÁrToolStripMenuItem,
-            this.hozzáadásToolStripMenuItem,
-            this.keresésToolStripMenuItem,
-            this.módosításToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // akciósÁrToolStripMenuItem
-            // 
-            this.akciósÁrToolStripMenuItem.Name = "akciósÁrToolStripMenuItem";
-            this.akciósÁrToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.akciósÁrToolStripMenuItem.Text = "Akciós ár";
-            // 
-            // hozzáadásToolStripMenuItem
-            // 
-            this.hozzáadásToolStripMenuItem.Name = "hozzáadásToolStripMenuItem";
-            this.hozzáadásToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.hozzáadásToolStripMenuItem.Text = "Hozzáadás";
-            // 
-            // keresésToolStripMenuItem
-            // 
-            this.keresésToolStripMenuItem.Name = "keresésToolStripMenuItem";
-            this.keresésToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.keresésToolStripMenuItem.Text = "Keresés";
-            // 
-            // módosításToolStripMenuItem
-            // 
-            this.módosításToolStripMenuItem.Name = "módosításToolStripMenuItem";
-            this.módosításToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.módosításToolStripMenuItem.Text = "Módosítás";
+            this.Add_BTN.Click += new System.EventHandler(this.Add_BTN_Click);
             // 
             // Modosit_BTN
             // 
@@ -168,16 +126,12 @@
             this.Controls.Add(this.Modosit_BTN);
             this.Controls.Add(this.Add_BTN);
             this.Controls.Add(this.termeket_DGV);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "BlackFriday";
             this.Text = "Black friday";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.termeket_DGV)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,11 +143,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nev;
         private System.Windows.Forms.DataGridViewTextBoxColumn gyarto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ar;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem akciósÁrToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hozzáadásToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem keresésToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem módosításToolStripMenuItem;
         private System.Windows.Forms.Button Modosit_BTN;
         private System.Windows.Forms.CheckBox akcio_CheckBox;
     }

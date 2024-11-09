@@ -138,5 +138,17 @@ namespace Black_Friday
             DGVColumnChange();
             LoadData();
         }
+
+        private void Add_BTN_Click(object sender, EventArgs e)
+        {
+            Hozzaadas HozzaadasForm = new Hozzaadas();
+            DialogResult result = HozzaadasForm.ShowDialog();
+            if(result==DialogResult.OK)
+            {
+                termeket_DGV.Rows.Clear();
+                LoadData();
+            }
+
+        }
     }
 }

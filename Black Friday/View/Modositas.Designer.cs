@@ -37,6 +37,7 @@
             this.Ar_NUM = new System.Windows.Forms.NumericUpDown();
             this.Szorzo_NUM = new System.Windows.Forms.NumericUpDown();
             this.Modosit_BTN = new System.Windows.Forms.Button();
+            this.Megse_BTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Ar_NUM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Szorzo_NUM)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +115,6 @@
             // 
             // Modosit_BTN
             // 
-            this.Modosit_BTN.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.Modosit_BTN.Location = new System.Drawing.Point(43, 157);
             this.Modosit_BTN.Name = "Modosit_BTN";
             this.Modosit_BTN.Size = new System.Drawing.Size(79, 31);
@@ -123,11 +123,25 @@
             this.Modosit_BTN.UseVisualStyleBackColor = true;
             this.Modosit_BTN.Click += new System.EventHandler(this.Modosit_BTN_Click);
             // 
+            // Megse_BTN
+            // 
+            this.Megse_BTN.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Megse_BTN.Location = new System.Drawing.Point(129, 157);
+            this.Megse_BTN.Name = "Megse_BTN";
+            this.Megse_BTN.Size = new System.Drawing.Size(76, 30);
+            this.Megse_BTN.TabIndex = 11;
+            this.Megse_BTN.Text = "Mégse";
+            this.Megse_BTN.UseVisualStyleBackColor = true;
+            this.Megse_BTN.Click += new System.EventHandler(this.Megse_BTN_Click);
+            // 
             // Modositas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.ClientSize = new System.Drawing.Size(277, 219);
+            this.ControlBox = false;
+            this.Controls.Add(this.Megse_BTN);
             this.Controls.Add(this.Modosit_BTN);
             this.Controls.Add(this.Szorzo_NUM);
             this.Controls.Add(this.Ar_NUM);
@@ -137,8 +151,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nev_TXB);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(293, 258);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(293, 258);
             this.Name = "Modositas";
-            this.Text = "Modosítás";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Módosítás";
             this.Load += new System.EventHandler(this.Modositas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Ar_NUM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Szorzo_NUM)).EndInit();
@@ -158,5 +177,6 @@
         private System.Windows.Forms.NumericUpDown Ar_NUM;
         private System.Windows.Forms.NumericUpDown Szorzo_NUM;
         private System.Windows.Forms.Button Modosit_BTN;
+        private System.Windows.Forms.Button Megse_BTN;
     }
 }

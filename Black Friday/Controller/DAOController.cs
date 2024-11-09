@@ -12,6 +12,7 @@ namespace Black_Friday.Controller
         List<Item>items=new List<Item> { new Item(), new Item("nev2", "gyarto012", 100, 20) };
         public bool AddItem(Item item)
         {
+            items.Add(item);
             return true;
         }
         public bool ChangeItem(string nev, string gyarto, int ar, int szorzo, int index)
@@ -23,6 +24,17 @@ namespace Black_Friday.Controller
         public Item Search(string nev)
         {
             return new Item();
+        }
+        public bool HasItem(string nev)
+        {
+            foreach (var item in items)
+            {
+                if(item.Nev==nev)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         public List<Item> getItems() {
             return items;

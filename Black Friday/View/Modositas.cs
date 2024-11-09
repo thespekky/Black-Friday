@@ -47,13 +47,25 @@ namespace Black_Friday.View
             nev_TXB.Text = nev;
             gyarto_TXB.Text = gyarto;
             Ar_NUM.Value = Convert.ToInt32(ar);
+            Szorzo_NUM.Value = Convert.ToInt32(szorzo);
 
         }
 
         private void Modosit_BTN_Click(object sender, EventArgs e)
         {
+            if (nev_TXB.Text == "" || gyarto_TXB.Text == "" || Ar_NUM.Value == 0 || Szorzo_NUM.Value == 0)
+            {
+                MessageBox.Show("Nincs minden adat megadva", "Figyelem");
+                return;
+            }
             ItemController.getInstance().changeItem(nev_TXB.Text, gyarto_TXB.Text, Convert.ToInt32(Ar_NUM.Value), Convert.ToInt32(Szorzo_NUM.Value), index);
+            this.DialogResult = DialogResult.Yes;
             Close();   
+        }
+
+        private void Megse_BTN_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
