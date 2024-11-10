@@ -10,7 +10,7 @@ namespace Black_Friday.Controller
     internal class ItemController
     {
         private static ItemController instance;
-        private static DAOController dao;
+        private static DAOInMemory dao;
 
 
         public static ItemController getInstance()
@@ -23,7 +23,7 @@ namespace Black_Friday.Controller
         }
         private ItemController()
         {
-            dao = new DAOController();
+            dao = new DAOInMemory();
         }
         public bool addItem(Item oneItem)
         {
@@ -33,7 +33,7 @@ namespace Black_Friday.Controller
         {
             return dao.ChangeItem( nev,  gyarto,  ar,  szorzo,  index);
         }
-        public Item SearchItem(string nev)
+        public List<Item> SearchItem(string nev)
         {
             return dao.Search(nev);
         }

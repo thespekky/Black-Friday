@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Black_Friday.Controller
 {
-    internal class DAOController
+    internal class DAOInMemory
     {
         List<Item>items=new List<Item> { new Item(), new Item("nev2", "gyarto012", 100, 20) };
         public bool AddItem(Item item)
@@ -21,9 +21,17 @@ namespace Black_Friday.Controller
             items[index]=item;
             return true;
         }
-        public Item Search(string nev)
+        public List<Item> Search(string nev)
         {
-            return new Item();
+            List <Item> searchedItems = new List <Item>();
+            for (int i = 0;i<items.Count;i++)
+            {
+                if (items[i].Nev.Contains(nev))
+                {
+                    searchedItems.Add(items[i]);
+                }
+            }
+            return searchedItems;
         }
         public bool HasItem(string nev)
         {

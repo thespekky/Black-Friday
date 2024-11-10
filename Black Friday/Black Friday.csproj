@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\DAOController.cs" />
+    <Compile Include="DAO\DAOInMemory.cs" />
     <Compile Include="Controller\ItemController.cs" />
+    <Compile Include="DAO\IDAO.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="View\Black Friday.cs">
       <SubType>Form</SubType>
@@ -100,8 +101,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
