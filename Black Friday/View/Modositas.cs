@@ -53,12 +53,13 @@ namespace Black_Friday.View
 
         private void Modosit_BTN_Click(object sender, EventArgs e)
         {
-            if (nev_TXB.Text == "" || gyarto_TXB.Text == "" || Ar_NUM.Value == 0 || Szorzo_NUM.Value == 0)
+            if (nev_TXB.Text == "" || gyarto_TXB.Text == "" || Ar_NUM.Value == 0 || Ar_NUM.Value == 0)
             {
                 MessageBox.Show("Nincs minden adat megadva", "Figyelem");
                 return;
             }
-            ItemController.getInstance().changeItem(nev_TXB.Text, gyarto_TXB.Text, Convert.ToInt32(Ar_NUM.Value), Convert.ToInt32(Szorzo_NUM.Value), index);
+            double akciosar = Convert.ToDouble(Ar_NUM.Value) - (Convert.ToDouble( Ar_NUM.Value) * (Convert.ToDouble(Szorzo_NUM.Value) / 100));
+            ItemController.getInstance().changeItem(nev_TXB.Text, gyarto_TXB.Text, Convert.ToDouble(Ar_NUM.Value), Convert.ToDouble(Szorzo_NUM.Value),akciosar, index);
             this.DialogResult = DialogResult.Yes;
             Close();   
         }

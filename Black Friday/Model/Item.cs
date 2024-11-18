@@ -23,7 +23,7 @@ namespace Black_Friday.Model
             if (szorzo <= 100 && szorzo >= 1)
             { 
                 this.Szorzo = szorzo;
-                this.Akcios_ar = this.Ar - (this.Ar*this.Szorzo / 100);
+                this.Akcios_ar = this.Ar - (this.Ar*(this.Szorzo / 100));
             }
         }
         public Item()

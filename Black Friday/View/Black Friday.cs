@@ -94,12 +94,24 @@ namespace Black_Friday
 
         private void termeket_DGV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //az index lekérése, mivel nincs törlés ezért a lista indexe+1 az lesz az adatbázis indexe
+            //
+            List<Item> itemsseged = ItemController.getInstance().GetItems();
+            int index = 0;
+            for (int i = 0; i < itemsseged.Count; i++)
+            {
+                if (itemsseged[i].Nev == items[e.RowIndex].Nev)
+                {
+                    index = i+1; break;
+                }
+            }
             
-            Modositas ModositasFrom = new Modositas(items[e.RowIndex].Nev, items[e.RowIndex].Gyarto, items[e.RowIndex].Ar, items[e.RowIndex].Szorzo,e.RowIndex);
+            Modositas ModositasFrom = new Modositas(items[e.RowIndex].Nev, items[e.RowIndex].Gyarto, items[e.RowIndex].Ar, items[e.RowIndex].Szorzo, index);
             DialogResult result= ModositasFrom.ShowDialog();
             if(result==DialogResult.Yes)
             {
                 termeket_DGV.Rows.Clear();
+                items=ItemController.getInstance().GetItems();
                 LoadData();
             }
             
@@ -126,6 +138,7 @@ namespace Black_Friday
             if(result==DialogResult.OK)
             {
                 termeket_DGV.Rows.Clear();
+                items = ItemController.getInstance().GetItems();
                 LoadData();
             }
 

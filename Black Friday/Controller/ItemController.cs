@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Black_Friday.DAO;
 using Black_Friday.Model;
 
 namespace Black_Friday.Controller
@@ -10,8 +11,8 @@ namespace Black_Friday.Controller
     internal class ItemController
     {
         private static ItemController instance;
-        private static DAOInMemory dao;
-
+        //private static DAOInMemory dao;
+        private static BlackFridayDBDAO dao;
 
         public static ItemController getInstance()
         {
@@ -23,15 +24,16 @@ namespace Black_Friday.Controller
         }
         private ItemController()
         {
-            dao = new DAOInMemory();
+            //dao = new DAOInMemory();
+            dao= new BlackFridayDBDAO();
         }
         public bool addItem(Item oneItem)
         {
             return dao.AddItem(oneItem);
         }
-        public bool changeItem(string nev,string gyarto,int ar,int szorzo,int index)
+        public bool changeItem(string nev,string gyarto,double ar, double szorzo,double akciosar, int index)
         {
-            return dao.ChangeItem( nev,  gyarto,  ar,  szorzo,  index);
+            return dao.ChangeItem( nev,  gyarto,  ar,  szorzo,akciosar,  index);
         }
         public List<Item> SearchItem(string nev)
         {
